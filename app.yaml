@@ -1,0 +1,17 @@
+service: prospects-ng
+
+runtime: nodejs16
+instance_class: F2
+
+automatic_scaling:
+  min_instances: 1
+
+env_variables:
+  BUCKET_NAME: "prospects-ng"
+
+handlers:
+  - url: /
+    static_files: dist/prospects-ng/index.html
+    upload: dist/prospects-ng/index.html
+  - url: /
+    static_dir: dist/prospects-ng
