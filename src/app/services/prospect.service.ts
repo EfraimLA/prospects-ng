@@ -15,12 +15,16 @@ export class ProspectService {
     return this.http.get<Prospect[]>(`${API_URL}/prospects`);
   }
 
+  getProspect(id: number) {
+    return this.http.get<Prospect>(`${API_URL}/prospects/${id}`);
+  }
+
   createProspect(prospect: Prospect) {
     return this.http.post<Prospect>(`${API_URL}/prospects`, prospect);
   }
 
   updateProspect(prospect: Prospect) {
-    return this.http.put<Prospect>(`${API_URL}/prospects`, prospect);
+    return this.http.put<Prospect>(`${API_URL}/prospects/${prospect.id}`, prospect);
   }
 
   deleteProspect(id: number) {

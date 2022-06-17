@@ -6,10 +6,19 @@ import {CreateProspectComponent} from "./components/create-prospect/create-prosp
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'prospects',
+    pathMatch: 'full'
+  },
+  {
+    path: 'prospects',
     component: ProspectsComponent
   },
   {
-    path: 'new',
+    path: 'edit',
+    component: CreateProspectComponent
+  },
+  {
+    path: 'edit/:id',
     component: CreateProspectComponent
   }
 ];

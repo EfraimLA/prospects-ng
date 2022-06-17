@@ -6,12 +6,14 @@ export interface Prospect {
   gender: string | undefined;
   nationality: string | undefined;
   maritalStatus: string | undefined;
+  economicDependents: number | undefined;
   grade: string | undefined;
   income: number | undefined;
   incomeValidation: string | undefined;
   jobAntiquity: number | undefined;
   creditHistory: boolean | undefined;
   actualCredit: string | undefined;
+  score: number | undefined;
   createdAt: Date | undefined;
 }
 
@@ -23,12 +25,14 @@ export class ProspectObject implements Prospect {
   gender: string | undefined;
   nationality: string | undefined;
   maritalStatus: string | undefined;
+  economicDependents: number | undefined;
   grade: string | undefined;
   income: number | undefined;
   incomeValidation: string | undefined;
   jobAntiquity: number | undefined;
   creditHistory: boolean | undefined;
   actualCredit: string | undefined;
+  score: number | undefined;
   createdAt: Date | undefined;
 
 }

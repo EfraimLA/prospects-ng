@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Prospect, ProspectObject} from "../../models/prospect.model";
 import {ProspectService} from "../../services/prospect.service";
+import {ActivatedRoute, Router} from "@angular/router";
+import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-create-prospect',
@@ -10,21 +12,35 @@ import {ProspectService} from "../../services/prospect.service";
 export class CreateProspectComponent implements OnInit {
 
   prospect: Prospect = new ProspectObject()
+  editing = false
 
-  constructor(private service: ProspectService) {
+  constructor(private service: ProspectService,
+              private route: ActivatedRoute,
+              private location: Location,
+              private router: Router) {
   }
 
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id') as any;
+
+    if (id) {
+      this.editing = true
+
+      this.service.getProspect(id)
+        .subscribe((prospect: Prospect) => this.prospect = prospect,
+          (error) => this.location.back());
+    }
   }
 
   onSubmit() {
     console.log(this.prospect);
 
-    if (this.prospect.id) {
+    if (this.prospect.id && this.editing) {
 
       this.service.updateProspect(this.prospect)
         .subscribe((prospect: Prospect) => {
           console.log(prospect);
+          this.prospect = prospect;
         })
 
     } else {
@@ -32,6 +48,8 @@ export class CreateProspectComponent implements OnInit {
       this.service.createProspect(this.prospect)
         .subscribe((prospect: Prospect) => {
           console.log(prospect);
+          this.prospect = prospect;
+          this.router.navigate(['/edit/', prospect.id]);
         });
 
     }
@@ -41,9 +59,7 @@ export class CreateProspectComponent implements OnInit {
     if (!this.prospect.id) return;
 
     this.service.deleteProspect(this.prospect.id)
-      .subscribe(() => {
-        console.log('Deleted');
-      })
+      .subscribe(() => this.router.navigate(['/prospects']))
   }
 
 }
