@@ -3,14 +3,20 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
+import {HttpClientModule} from "@angular/common/http";
+import {ProspectsComponent} from './components/prospects/prospects.component';
+import {CreateProspectComponent} from './components/create-prospect/create-prospect.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProspectsComponent,
+    CreateProspectComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

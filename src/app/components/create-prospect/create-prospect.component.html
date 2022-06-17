@@ -1,0 +1,244 @@
+<div class="min-h-screen flex justify-center items-center">
+  <!-- Form Card -->
+  <div class="w-auto m-5 p-4 border-gray-600 shadow-md rounded-xl">
+    <!-- Personal Information -->
+    <div class="mt-10 sm:mt-0">
+      <div class="md:grid md:grid-cols-3 md:gap-6">
+        <div class="md:col-span-1">
+          <div class="px-4 sm:px-0">
+            <h3 class="text-lg font-medium leading-6 text-gray-900">
+              Información Personal
+            </h3>
+            <p class="mt-1 text-sm text-gray-600">
+              Nos gustaría conocerte y saber más de ti
+            </p>
+          </div>
+        </div>
+        <div class="mt-5 md:mt-0 md:col-span-2">
+          <div class="shadow overflow-hidden sm:rounded-md">
+            <div class="px-4 py-5 bg-white sm:p-6">
+              <div class="grid grid-cols-6 gap-6">
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="name" class="block text-sm font-medium text-gray-700">
+                    Nombre
+                  </label>
+                  <input type="text" name="name" id="name"
+                         class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="lastName" class="block text-sm font-medium text-gray-700">
+                    Apellido
+                  </label>
+                  <input type="text" name="lastName" id="lastName"
+                         class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="birthdate" class="block text-sm font-medium text-gray-700">
+                    Fecha de Nacimiento
+                  </label>
+                  <input type="date" name="birthdate" id="birthdate"
+                         class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+
+                <fieldset class="col-span-6 sm:col-span-3">
+                  <legend class="block text-sm font-medium text-gray-700">
+                    Género
+                  </legend>
+                  <div class="mt-2 space-y-2">
+                    <div class="flex items-center">
+                      <input id="gender1" name="gender1" type="radio"
+                             class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                      <label for="gender1" class="ml-3 block text-sm font-medium text-gray-700">
+                        Hombre
+                      </label>
+                    </div>
+                    <div class="flex items-center">
+                      <input id="gender2" name="gender2" type="radio"
+                             class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                      <label for="gender2" class="ml-3 block text-sm font-medium text-gray-700">
+                        Mujer
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="nacionality" class="block text-sm font-medium text-gray-700">
+                    Nacionalidad
+                  </label>
+                  <select id="nacionality" name="nacionality"
+                          class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <option>Mexicano</option>
+                    <option>Extranjero</option>
+                  </select>
+                </div>
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="maritalStatus" class="block text-sm font-medium text-gray-700">
+                    Estado Civil
+                  </label>
+                  <select id="maritalStatus" name="maritalStatus"
+                          class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <option>Soltero</option>
+                    <option>Casado</option>
+                    <option>Unión Libre</option>
+                  </select>
+                </div>
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="grade" class="block text-sm font-medium text-gray-700">
+                    Grado de Estudios
+                  </label>
+                  <select id="grade" name="grade"
+                          class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <option>Preparatoria</option>
+                    <option>Licenciatura</option>
+                    <option>Posgrado</option>
+                  </select>
+                </div>
+
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden sm:block" aria-hidden="true">
+      <div class="py-5">
+        <div class="border-t border-gray-200"></div>
+      </div>
+    </div>
+
+    <!-- Financial Information -->
+    <div class="mt-10 sm:mt-0">
+      <div class="md:grid md:grid-cols-3 md:gap-6">
+        <div class="md:col-span-1">
+          <div class="px-4 sm:px-0">
+            <h3 class="text-lg font-medium leading-6 text-gray-900">
+              Información Financiera
+            </h3>
+            <p class="mt-1 text-sm text-gray-600">
+              Ingresa tu información financiera para evaluar tu solicitud de crédito
+            </p>
+          </div>
+        </div>
+        <div class="mt-5 md:mt-0 md:col-span-2">
+          <div class="shadow overflow-hidden sm:rounded-md">
+            <div class="px-4 py-5 bg-white sm:p-6">
+              <div class="grid grid-cols-6 gap-6">
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="income" class="block text-sm font-medium text-gray-700">
+                    Ingreso Mensual
+                  </label>
+                  <div class="mt-1 flex rounded-md shadow-sm">
+                      <span
+                        class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                        $
+                      </span>
+                    <input type="number" name="income" id="income"
+                           class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
+                           placeholder="...">
+                  </div>
+                </div>
+
+                <fieldset class="col-span-6 sm:col-span-3">
+                  <legend class="block text-sm font-medium text-gray-700">
+                    Comprobable con
+                  </legend>
+                  <div class="mt-2 space-y-2">
+                    <div class="flex items-center">
+                      <input id="incomeValidation1" name="incomeValidation1" type="radio"
+                             class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                      <label for="incomeValidation1" class="ml-3 block text-sm font-medium text-gray-700">
+                        Estado de Cuenta
+                      </label>
+                    </div>
+                    <div class="flex items-center">
+                      <input id="incomeValidation2" name="incomeValidation2" type="radio"
+                             class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                      <label for="incomeValidation2" class="ml-3 block text-sm font-medium text-gray-700">
+                        Nómina
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="jobAntiquity" class="block text-sm font-medium text-gray-700">
+                    Antigüedad en el Trabajo
+                  </label>
+                  <input type="text" name="jobAntiquity" id="jobAntiquity"
+                         class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+
+                <fieldset class="col-span-6 sm:col-span-3">
+                  <legend class="block text-sm font-medium text-gray-700">
+                    Cuenta con Historial Crediticio
+                  </legend>
+                  <div class="mt-2 space-y-2">
+                    <div class="flex items-center">
+                      <input id="creditHistory1" name="creditHistory1" type="radio"
+                             class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                      <label for="creditHistory1" class="ml-3 block text-sm font-medium text-gray-700">
+                        Sí
+                      </label>
+                    </div>
+                    <div class="flex items-center">
+                      <input id="creditHistory2" name="creditHistory2" type="radio"
+                             class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                      <label for="creditHistory2" class="ml-3 block text-sm font-medium text-gray-700">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label for="nacionality" class="block text-sm font-medium text-gray-700">
+                    Crédito Actual
+                  </label>
+                  <select id="nacionality" name="nacionality"
+                          class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <option>Tarjeta de Crédito</option>
+                    <option>Crédito Automotriz</option>
+                    <option>Otros</option>
+                  </select>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="options" class="px-4 pt-4 text-right">
+      <button *ngIf="!prospect.id"
+        class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Crear Nueva Solicitud
+      </button>
+
+      <button *ngIf="prospect.id"
+              class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mr-4">
+        Modificar Solicitud
+      </button>
+
+      <button *ngIf="prospect.id"
+              class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Eliminar Solicitud
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
