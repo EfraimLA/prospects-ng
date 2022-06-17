@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ProspectService} from "../../services/prospect.service";
 import {Prospect} from "../../models/prospect.model";
 import {Router} from "@angular/router";
+import {riskLevel} from "../../utils/variables";
 
 @Component({
   selector: 'app-prospects',
@@ -24,4 +25,7 @@ export class ProspectsComponent implements OnInit {
       });
   }
 
+  riskLevel(score: any): string {
+    return riskLevel(score)
+  }
 }

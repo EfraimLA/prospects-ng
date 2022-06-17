@@ -29,6 +29,10 @@
                   class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
                 Score
               </th>
+              <th scope="col"
+                  class="py-3 px-6 text-xs font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-400">
+                Riesgo
+              </th>
               <th (click)="router.navigate(['/edit'])" scope="col"
                   class="text-right py-3 px-6 text-xs font-medium tracking-wider font-bold uppercase dark:text-gray-400 cursor-pointer">
                 Crear Solicitud
@@ -50,11 +54,14 @@
               <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 {{prospect.name}}
               </td>
-              <td class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white">
+              <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 {{prospect.lastName}}
               </td>
               <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 {{prospect.score}}
+              </td>
+              <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                {{riskLevel(prospect.score)}}
               </td>
               <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
                 <a [routerLink]="['/edit/', prospect.id]"

@@ -3,6 +3,7 @@ import {Prospect, ProspectObject} from "../../models/prospect.model";
 import {ProspectService} from "../../services/prospect.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Location} from "@angular/common";
+import {riskLevel} from 'src/app/utils/variables';
 
 @Component({
   selector: 'app-create-prospect',
@@ -17,7 +18,7 @@ export class CreateProspectComponent implements OnInit {
   constructor(private service: ProspectService,
               private route: ActivatedRoute,
               private location: Location,
-              private router: Router) {
+              protected router: Router) {
   }
 
   ngOnInit(): void {
@@ -60,6 +61,10 @@ export class CreateProspectComponent implements OnInit {
 
     this.service.deleteProspect(this.prospect.id)
       .subscribe(() => this.router.navigate(['/prospects']))
+  }
+
+  riskLevel(score: any): string {
+    return riskLevel(score)
   }
 
 }
