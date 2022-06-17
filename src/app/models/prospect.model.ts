@@ -4,7 +4,7 @@ export interface Prospect {
   lastName: string | undefined;
   birthdate: Date | undefined;
   gender: string | undefined;
-  nacionality: string | undefined;
+  nationality: string | undefined;
   maritalStatus: string | undefined;
   grade: string | undefined;
   income: number | undefined;
@@ -21,7 +21,7 @@ export class ProspectObject implements Prospect {
   lastName: string | undefined;
   birthdate: Date | undefined;
   gender: string | undefined;
-  nacionality: string | undefined;
+  nationality: string | undefined;
   maritalStatus: string | undefined;
   grade: string | undefined;
   income: number | undefined;

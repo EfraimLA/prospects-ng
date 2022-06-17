@@ -17,18 +17,24 @@ export class CreateProspectComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createProspect() {
-    this.service.createProspect(this.prospect)
-      .subscribe((prospect: Prospect) => {
-        console.log(prospect);
-      });
-  }
+  onSubmit() {
+    console.log(this.prospect);
 
-  updateProspect() {
-    this.service.updateProspect(this.prospect)
-      .subscribe((prospect: Prospect) => {
-        console.log(prospect);
-      });
+    if (this.prospect.id) {
+
+      this.service.updateProspect(this.prospect)
+        .subscribe((prospect: Prospect) => {
+          console.log(prospect);
+        })
+
+    } else {
+
+      this.service.createProspect(this.prospect)
+        .subscribe((prospect: Prospect) => {
+          console.log(prospect);
+        });
+
+    }
   }
 
   deleteProspect() {

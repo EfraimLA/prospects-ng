@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Prospect} from "../models/prospect.model";
 import {API_URL} from "../../environments/environment";
-import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
